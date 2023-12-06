@@ -1,0 +1,16 @@
+{
+    "age": "age",
+    "job": "type of job",
+    "marital": "marital status",
+    "default": "has credit in default?",
+    "balance": "average yearly balance, in euros",
+    "housing": "has housing loan?",
+    "contact": "contact communication type",
+    "day": "last contact day of the month",
+    "month": "last contact month of year",
+    "duration": "last contact duration, in seconds",
+    "campaign": "number of contacts performed during this campaign and for this client",
+    "pdays": "number of days that passed by after the client was last contacted from a previous campaign",
+    "previous": "number of contacts performed before this campaign and for this client",
+    "poutcome": "outcome of the previous marketing campaign"    
+}

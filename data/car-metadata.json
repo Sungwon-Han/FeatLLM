@@ -1,0 +1,8 @@
+{
+    "buying":"buying price",
+    "maint":"price of the maintenance",
+    "doors":"number of doors",
+    "persons":"capacity in terms of persons to carry",
+    "lug_boot":"the size of luggage boot",
+    "safety":"estimated safety of the car"
+}

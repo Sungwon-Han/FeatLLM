@@ -1,0 +1,13 @@
+{
+    "Age":"age of the patient",
+    "Sex":"sex of the patient",
+    "ChestPainType":"chest pain type",
+    "RestingBP":"resting blood pressure [mm Hg]",
+    "Cholesterol":"serum cholesterol [mm/dl]",
+    "FastingBS":"fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]",
+    "RestingECG":"resting electrocardiogram results",
+    "MaxHR":"maximum heart rate achieved",
+    "ExerciseAngina":"exercise-induced angina",
+    "Oldpeak":"oldpeak = ST [Numeric value measured in depression]",
+    "ST_Slope":"the slope of the peak exercise ST segment"   
+}

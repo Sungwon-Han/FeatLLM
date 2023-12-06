@@ -1,0 +1,6 @@
+{
+    "Recency": "months since last donation",
+    "Frequency": "total number of donation",
+    "Monetary": "total blood donated in c.c.",
+    "Time": "months since first donation"
+}

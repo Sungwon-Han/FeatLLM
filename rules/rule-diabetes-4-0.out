@@ -1,0 +1,177 @@
+- Pregnancies: There is no clear causal relationship between the number of pregnancies and the presence of diabetes. However, it is known that women who have had multiple pregnancies are at a higher risk of developing gestational diabetes.
+- Glucose: High levels of glucose in the blood are indicative of diabetes. 
+- BloodPressure: There is a correlation between high blood pressure and diabetes, but it is not a definitive indicator.
+- SkinThickness: There is no direct causal relationship between skin thickness and diabetes. However, individuals with diabetes may have thicker skin due to certain metabolic changes.
+- Insulin: High levels of insulin may indicate the presence of diabetes, especially if accompanied by high glucose levels. 
+- BMI: High BMI is associated with an increased risk of developing type 2 diabetes. 
+- DiabetesPedigreeFunction: This function calculates the genetic risk of diabetes based on family history. Higher values indicate a higher risk. 
+- Age: The risk of developing diabetes increases with age. 
+
+Step 2. Inferred conditions based on examples and Step 1's results:
+
+10 different conditions for class "no":
+- Glucose < 100
+- BloodPressure <= 80
+- Insulin <= 50
+- BMI < 25
+- DiabetesPedigreeFunction < 0.2
+- Age < 40
+- Pregnancies <= 2
+- SkinThickness <= 10
+- Glucose < 110 and BMI < 30
+- Age < 30 and Insulin <= 20
+
+10 different conditions for class "yes":
+- Glucose >= 120
+- BloodPressure > 80
+- Insulin > 100
+- BMI >= 30
+- DiabetesPedigreeFunction >= 0.3
+- Age >= 50
+- Pregnancies > 5
+- SkinThickness > 20
+- Glucose >= 140 and BMI >= 35
+- Age >= 40 and Insulin > 50
+
+---DIVIDER---
+
+- Pregnancies: There is no clear causal relationship between the number of pregnancies and the likelihood of having diabetes. However, it is possible that a higher number of pregnancies may increase the risk of developing gestational diabetes.
+- Glucose: High plasma glucose concentration is a common symptom of diabetes. Therefore, higher glucose levels may indicate a higher likelihood of having diabetes.
+- BloodPressure: There is no direct causal relationship between blood pressure and diabetes. However, high blood pressure can be a risk factor for developing diabetes and is often associated with other health conditions that increase the risk.
+- SkinThickness: There is no direct causal relationship between skin thickness and diabetes. However, increased skin thickness may be associated with insulin resistance, which is a common characteristic of diabetes.
+- Insulin: Insulin is directly related to diabetes, as it is the hormone responsible for regulating blood sugar levels. Low or zero insulin levels may indicate a higher likelihood of having diabetes.
+- BMI: High body mass index (BMI) is a risk factor for developing type 2 diabetes. Therefore, higher BMI values may indicate a higher likelihood of having diabetes.
+- DiabetesPedigreeFunction: The diabetes pedigree function is a numerical value that represents the genetic influence of diabetes in a patient's family history. Higher values may indicate a higher likelihood of having diabetes.
+- Age: Age is a risk factor for developing diabetes, as the likelihood increases with age. Therefore, older individuals may have a higher likelihood of having diabetes.
+
+Step 2. Inferred conditions:
+10 different conditions for class "no":
+- Glucose (< 100)
+- BMI (< 25)
+- Age (< 40)
+- BloodPressure (< 80)
+- Insulin (<= 50)
+- SkinThickness (< 10)
+- DiabetesPedigreeFunction (< 0.2)
+- Pregnancies (<= 2)
+- Age (<= 30)
+- BMI (< 20)
+
+10 different conditions for class "yes":
+- Glucose (>= 120)
+- BMI (>= 30)
+- Age (>= 50)
+- BloodPressure (>= 90)
+- Insulin (> 100)
+- SkinThickness (>= 20)
+- DiabetesPedigreeFunction (>= 0.3)
+- Pregnancies (>= 6)
+- Age (>= 40)
+- BMI (>= 25)
+
+---DIVIDER---
+
+- Pregnancies: There is no clear causal relationship between the number of times pregnant and the presence of diabetes.
+- Glucose: Higher plasma glucose concentration may indicate the presence of diabetes.
+- BloodPressure: There is no clear causal relationship between diastolic blood pressure and the presence of diabetes.
+- SkinThickness: There is no clear causal relationship between triceps skin fold thickness and the presence of diabetes.
+- Insulin: Higher serum insulin levels may indicate the presence of diabetes.
+- BMI: Higher body mass index may indicate the presence of diabetes.
+- DiabetesPedigreeFunction: Higher diabetes pedigree function values may indicate the presence of diabetes.
+- Age: Older age may indicate the presence of diabetes.
+
+Step 2. Conditions for class "no":
+- Glucose (< 100)
+- Insulin (<= 50)
+- BMI (< 25)
+- DiabetesPedigreeFunction (< 0.2)
+- Age (< 30)
+- Glucose (< 110) and BMI (< 30)
+- Glucose (< 120) and Age (< 40)
+- Insulin (<= 20) and BMI (< 28)
+- BloodPressure (< 80) and Age (< 35)
+- Glucose (< 100) and Insulin (<= 30)
+
+Conditions for class "yes":
+- Glucose (>= 120)
+- Insulin (> 100)
+- BMI (>= 30)
+- DiabetesPedigreeFunction (>= 0.4)
+- Age (>= 40)
+- Glucose (>= 140) and BMI (>= 35)
+- Glucose (>= 160) and Age (>= 50)
+- Insulin (> 150) and BMI (>= 32)
+- BloodPressure (> 90) and Age (>= 45)
+- Glucose (>= 130) and Insulin (> 80)
+
+---DIVIDER---
+
+- Pregnancies: There is no direct causal relationship between the number of times pregnant and the presence of diabetes. However, it is generally known that women with a higher number of pregnancies may have a higher risk of developing gestational diabetes.
+- Glucose: High plasma glucose concentration is a common symptom of diabetes. Therefore, higher glucose levels may indicate the presence of diabetes.
+- BloodPressure: There is no direct causal relationship between diastolic blood pressure and the presence of diabetes. However, high blood pressure is often associated with diabetes as a comorbidity.
+- SkinThickness: There is no direct causal relationship between triceps skin fold thickness and the presence of diabetes. However, individuals with higher skin thickness may have a higher risk of developing insulin resistance, which can lead to diabetes.
+- Insulin: Low or zero serum insulin levels may indicate the presence of diabetes, as the body is unable to produce or effectively use insulin.
+- BMI: High body mass index is a risk factor for developing diabetes, as it is associated with insulin resistance.
+- DiabetesPedigreeFunction: The diabetes pedigree function is a genetic risk score that quantifies the risk of developing diabetes based on family history. Higher values indicate a higher risk.
+- Age: Older age is a risk factor for developing diabetes, as the risk increases with age.
+
+Step 2. Inference of conditions:
+10 different conditions for class "no":
+- Glucose (< 100)
+- Insulin (>= 10)
+- BMI (< 25)
+- Age (< 30)
+- Glucose (< 110) and BMI (< 30)
+- Age (< 40) and Insulin (>= 5)
+- BMI (< 28) and DiabetesPedigreeFunction (< 0.3)
+- Age (< 35) and BloodPressure (< 80)
+- Glucose (< 120) and SkinThickness (< 20)
+- BMI (< 27) and BloodPressure (< 85)
+
+10 different conditions for class "yes":
+- Glucose (>= 100)
+- Insulin (< 5)
+- BMI (>= 25)
+- Age (>= 40)
+- Glucose (>= 120) and BMI (>= 30)
+- Age (>= 35) and Insulin (< 10)
+- BMI (>= 28) and DiabetesPedigreeFunction (>= 0.3)
+- Age (>= 30) and BloodPressure (>= 80)
+- Glucose (>= 130) and SkinThickness (>= 20)
+- BMI (>= 30) and BloodPressure (>= 85)
+
+---DIVIDER---
+
+- Pregnancies: There is no clear causal relationship between the number of pregnancies and the presence of diabetes. However, it is possible that a higher number of pregnancies may increase the risk of developing diabetes.
+- Glucose: High plasma glucose concentration is a common symptom of diabetes. Therefore, higher glucose levels may indicate the presence of diabetes.
+- BloodPressure: There is no direct causal relationship between blood pressure and diabetes. However, individuals with diabetes may have higher blood pressure due to the effects of the disease on the cardiovascular system.
+- SkinThickness: There is no direct causal relationship between skin thickness and diabetes. However, individuals with diabetes may have thicker skin folds due to factors such as insulin resistance.
+- Insulin: Individuals with diabetes may have higher levels of serum insulin. Therefore, higher insulin levels may indicate the presence of diabetes.
+- BMI: Obesity and higher body mass index are risk factors for developing diabetes. Therefore, higher BMI values may indicate the presence of diabetes.
+- DiabetesPedigreeFunction: This function calculates the likelihood of an individual having diabetes based on their family history. Higher values indicate a higher likelihood of having diabetes.
+- Age: The risk of developing diabetes increases with age. Therefore, older individuals may be more likely to have diabetes.
+
+Step 2. Inference of conditions:
+10 different conditions for class "no":
+- Glucose (< 100)
+- BMI (< 25)
+- DiabetesPedigreeFunction (< 0.2)
+- Age (< 30)
+- Insulin (<= 50)
+- BloodPressure (< 80)
+- SkinThickness (<= 10)
+- Pregnancies (< 2)
+- Glucose (<= 90)
+- BMI (< 23)
+
+10 different conditions for class "yes":
+- Glucose (>= 120)
+- BMI (>= 30)
+- DiabetesPedigreeFunction (>= 0.4)
+- Age (>= 40)
+- Insulin (> 100)
+- BloodPressure (>= 90)
+- SkinThickness (> 20)
+- Pregnancies (>= 6)
+- Glucose (>= 140)
+- BMI (>= 35)

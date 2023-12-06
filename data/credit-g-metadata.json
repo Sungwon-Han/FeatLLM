@@ -1,0 +1,22 @@
+{
+    "checking_status":"Status of existing checking account, in Deutsche Mark.",
+    "duration":"Duration in months",
+    "credit_history":"Credit history",
+    "purpose":"Purpose of the credit",
+    "credit_amount":"Credit amount",
+    "savings_status":"Status of savings account/bonds, in Deutsche Mark.",
+    "employment":"Present employment, in number of years.",
+    "installment_commitment":"Installment rate in percentage of disposable income",
+    "personal_status":"Personal status (married, single,...) and sex",
+    "other_parties":"Other debtors / guarantors",
+    "residence_since":"Present residence since X years",
+    "property_magnitude":"Property (e.g. real estate)",
+    "age":"Age in years",
+    "other_payment_plans":"Other installment plans (banks, stores)",
+    "housing":"Housing (rent, own,...)",
+    "existing_credits":"Number of existing credits at this bank",
+    "job":"Job",
+    "num_dependents":"Number of people being liable to provide maintenance for",
+    "own_telephone":"Telephone",
+    "foreign_worker":"Foreign worker"   
+}

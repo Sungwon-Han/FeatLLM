@@ -1,0 +1,16 @@
+{
+    "age":"the age of an individual",
+    "workclass":"a general term to represent the employment status of an individual",
+    "fnlwgt":"the number of units in the target population that the responding unit represents",
+    "education":"the highest level of education achieved by an individual",
+    "educational-num":"the highest level of education achieved in numerical form",
+    "marital-status":"marital status of an individual",
+    "occupation":"the general type of occupation of an individual",
+    "relationship":"what this individual is relative to others",
+    "race":"race",
+    "gender":"gender",
+    "capital-gain":"capital gain last year",
+    "capital-loss":"capital loss last year",
+    "hours-per-week":"the hours an individual has reported to work per week",
+    "native-country":"country of origin for an individual"
+}

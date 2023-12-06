@@ -1,0 +1,16 @@
+Provide me a python code for function, given description below.
+
+Function name: [NAME]
+
+Input: Dataframe df_input
+
+Input Features:
+[FEATURES]
+
+Output: Dataframe df_output. Create a new dataframe df_output. Each column in df_output refers whether the selected column in df_input follows the condition (1) or not (0). Be sure that the function code well matches with its feature type (i.e., numerical, categorical).
+
+Conditions: 
+[CONDITIONS]
+
+
+Wrap only the function part with <start> and <end>, and do not add any comments, descriptions, and package importing lines in the code.

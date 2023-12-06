@@ -1,0 +1,175 @@
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Pregnancies'] = df_input['Pregnancies'].apply(lambda x: 1 if x <= 2 else 0)
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x < 100 else 0)
+    df_output['BloodPressure'] = df_input['BloodPressure'].apply(lambda x: 1 if x <= 80 else 0)
+    df_output['SkinThickness'] = df_input['SkinThickness'].apply(lambda x: 1 if x <= 10 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x <= 50 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x < 25 else 0)
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'].apply(lambda x: 1 if x < 0.2 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x < 40 else 0)
+    
+    df_output['Glucose_BMI'] = df_input.apply(lambda x: 1 if x['Glucose'] < 110 and x['BMI'] < 30 else 0, axis=1)
+    df_output['Age_Insulin'] = df_input.apply(lambda x: 1 if x['Age'] < 30 and x['Insulin'] <= 20 else 0, axis=1)
+    
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Pregnancies'] = df_input['Pregnancies'].apply(lambda x: 1 if x > 5 else 0)
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x >= 120 else 0)
+    df_output['BloodPressure'] = df_input['BloodPressure'].apply(lambda x: 1 if x > 80 else 0)
+    df_output['SkinThickness'] = df_input['SkinThickness'].apply(lambda x: 1 if x > 20 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x > 100 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x >= 30 else 0)
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'].apply(lambda x: 1 if x >= 0.3 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x >= 50 else 0)
+    
+    df_output['Glucose_BMI'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 140 and x['BMI'] >= 35 else 0, axis=1)
+    df_output['Age_Insulin'] = df_input.apply(lambda x: 1 if x['Age'] >= 40 and x['Insulin'] > 50 else 0, axis=1)
+    
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Glucose'] = df_input['Glucose'] < 100
+    df_output['BMI'] = df_input['BMI'] < 25
+    df_output['Age'] = df_input['Age'] < 40
+    df_output['BloodPressure'] = df_input['BloodPressure'] < 80
+    df_output['Insulin'] = df_input['Insulin'] <= 50
+    df_output['SkinThickness'] = df_input['SkinThickness'] < 10
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'] < 0.2
+    df_output['Pregnancies'] = df_input['Pregnancies'] <= 2
+    df_output['Age2'] = df_input['Age'] <= 30
+    df_output['BMI2'] = df_input['BMI'] < 20
+    
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Glucose'] = df_input['Glucose'] >= 120
+    df_output['BMI'] = df_input['BMI'] >= 30
+    df_output['Age'] = df_input['Age'] >= 50
+    df_output['BloodPressure'] = df_input['BloodPressure'] >= 90
+    df_output['Insulin'] = df_input['Insulin'] > 100
+    df_output['SkinThickness'] = df_input['SkinThickness'] >= 20
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'] >= 0.3
+    df_output['Pregnancies'] = df_input['Pregnancies'] >= 6
+    df_output['Age2'] = df_input['Age'] >= 40
+    df_output['BMI2'] = df_input['BMI'] >= 25
+    
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Glucose'] = df_input['Glucose'] < 100
+    df_output['Insulin'] = df_input['Insulin'] <= 50
+    df_output['BMI'] = df_input['BMI'] < 25
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'] < 0.2
+    df_output['Age'] = df_input['Age'] < 30
+    df_output['Glucose_BMI'] = (df_input['Glucose'] < 110) & (df_input['BMI'] < 30)
+    df_output['Glucose_Age'] = (df_input['Glucose'] < 120) & (df_input['Age'] < 40)
+    df_output['Insulin_BMI'] = (df_input['Insulin'] <= 20) & (df_input['BMI'] < 28)
+    df_output['BloodPressure_Age'] = (df_input['BloodPressure'] < 80) & (df_input['Age'] < 35)
+    df_output['Glucose_Insulin'] = (df_input['Glucose'] < 100) & (df_input['Insulin'] <= 30)
+    
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x >= 120 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x > 100 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x >= 30 else 0)
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'].apply(lambda x: 1 if x >= 0.4 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x >= 40 else 0)
+    df_output['Glucose_BMI'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 140 and x['BMI'] >= 35 else 0, axis=1)
+    df_output['Glucose_Age'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 160 and x['Age'] >= 50 else 0, axis=1)
+    df_output['Insulin_BMI'] = df_input.apply(lambda x: 1 if x['Insulin'] > 150 and x['BMI'] >= 32 else 0, axis=1)
+    df_output['BloodPressure_Age'] = df_input.apply(lambda x: 1 if x['BloodPressure'] > 90 and x['Age'] >= 45 else 0, axis=1)
+    df_output['Glucose_Insulin'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 130 and x['Insulin'] > 80 else 0, axis=1)
+    
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Glucose'] = df_input['Glucose'] < 100
+    df_output['Insulin'] = df_input['Insulin'] >= 10
+    df_output['BMI'] = df_input['BMI'] < 25
+    df_output['Age'] = df_input['Age'] < 30
+    df_output['Glucose_BMI'] = (df_input['Glucose'] < 110) & (df_input['BMI'] < 30)
+    df_output['Age_Insulin'] = (df_input['Age'] < 40) & (df_input['Insulin'] >= 5)
+    df_output['BMI_DiabetesPedigreeFunction'] = (df_input['BMI'] < 28) & (df_input['DiabetesPedigreeFunction'] < 0.3)
+    df_output['Age_BloodPressure'] = (df_input['Age'] < 35) & (df_input['BloodPressure'] < 80)
+    df_output['Glucose_SkinThickness'] = (df_input['Glucose'] < 120) & (df_input['SkinThickness'] < 20)
+    df_output['BMI_BloodPressure'] = (df_input['BMI'] < 27) & (df_input['BloodPressure'] < 85)
+    
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x >= 100 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x < 5 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x >= 25 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x >= 40 else 0)
+    df_output['Glucose_BMI'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 120 and x['BMI'] >= 30 else 0, axis=1)
+    df_output['Age_Insulin'] = df_input.apply(lambda x: 1 if x['Age'] >= 35 and x['Insulin'] < 10 else 0, axis=1)
+    df_output['BMI_DiabetesPedigreeFunction'] = df_input.apply(lambda x: 1 if x['BMI'] >= 28 and x['DiabetesPedigreeFunction'] >= 0.3 else 0, axis=1)
+    df_output['Age_BloodPressure'] = df_input.apply(lambda x: 1 if x['Age'] >= 30 and x['BloodPressure'] >= 80 else 0, axis=1)
+    df_output['Glucose_SkinThickness'] = df_input.apply(lambda x: 1 if x['Glucose'] >= 130 and x['SkinThickness'] >= 20 else 0, axis=1)
+    df_output['BMI_BloodPressure'] = df_input.apply(lambda x: 1 if x['BMI'] >= 30 and x['BloodPressure'] >= 85 else 0, axis=1)
+    
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x < 100 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x < 25 else 0)
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'].apply(lambda x: 1 if x < 0.2 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x < 30 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x <= 50 else 0)
+    df_output['BloodPressure'] = df_input['BloodPressure'].apply(lambda x: 1 if x < 80 else 0)
+    df_output['SkinThickness'] = df_input['SkinThickness'].apply(lambda x: 1 if x <= 10 else 0)
+    df_output['Pregnancies'] = df_input['Pregnancies'].apply(lambda x: 1 if x < 2 else 0)
+    df_output['Glucose_2'] = df_input['Glucose'].apply(lambda x: 1 if x <= 90 else 0)
+    df_output['BMI_2'] = df_input['BMI'].apply(lambda x: 1 if x < 23 else 0)
+    
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Glucose'] = df_input['Glucose'].apply(lambda x: 1 if x >= 120 else 0)
+    df_output['BMI'] = df_input['BMI'].apply(lambda x: 1 if x >= 30 else 0)
+    df_output['DiabetesPedigreeFunction'] = df_input['DiabetesPedigreeFunction'].apply(lambda x: 1 if x >= 0.4 else 0)
+    df_output['Age'] = df_input['Age'].apply(lambda x: 1 if x >= 40 else 0)
+    df_output['Insulin'] = df_input['Insulin'].apply(lambda x: 1 if x > 100 else 0)
+    df_output['BloodPressure'] = df_input['BloodPressure'].apply(lambda x: 1 if x >= 90 else 0)
+    df_output['SkinThickness'] = df_input['SkinThickness'].apply(lambda x: 1 if x > 20 else 0)
+    df_output['Pregnancies'] = df_input['Pregnancies'].apply(lambda x: 1 if x >= 6 else 0)
+    df_output['Glucose_2'] = df_input['Glucose'].apply(lambda x: 1 if x >= 140 else 0)
+    df_output['BMI_2'] = df_input['BMI'].apply(lambda x: 1 if x >= 35 else 0)
+    
+    return df_output
