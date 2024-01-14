@@ -1,4 +1,4 @@
-# Large Language Model Can Be a Rule-based Prompt Engineer for Few-Shot Tabular Learning #
+# Large Language Models Can Automatically Engineer Features for Few-Shot Tabular Learning #
 
 This repo is the PyTorch code of our paper, currently under review.
 
