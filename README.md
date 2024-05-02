@@ -1,6 +1,6 @@
 # Large Language Models Can Automatically Engineer Features for Few-Shot Tabular Learning #
 
-This repo is the PyTorch code of our paper, currently under review.
+This repo is the PyTorch code of our paper, which is accepted to ICML 2024.
 
 ## Required packages ##
 - python == 3.8.10
